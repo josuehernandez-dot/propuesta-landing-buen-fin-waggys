@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="es-MX" data-wbf-state="active" data-wbf-phase="buen-fin" data-wbf-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buen Fin Waggy's · Propuesta de landing</title>
+<meta name="description" content="Propuesta CRO de Equipo WEECOM: landing de Buen Fin para Waggy's (30% en toda la tienda, envío gratis desde $749 y regalos por compra).">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/waggys-bf.css">
+<link rel="stylesheet" href="assets/demo.css">
+</head>
+<body class="wbf">
+
+<!-- ===== Herramienta de propuesta (no va en Shopify) ===== -->
+<details class="demo-panel" open>
+  <summary>Simular fecha</summary>
+  <p class="demo-panel__help">La landing cambia sola según la fecha. Prueba cada etapa:</p>
+  <div class="demo-panel__btns" role="group" aria-label="Fase a simular">
+    <button type="button" data-demo-phase="pre">Antes del 13 nov</button>
+    <button type="button" data-demo-phase="buen-fin">Buen Fin 30%</button>
+    <button type="button" data-demo-phase="extension">Extensión 20%</button>
+    <button type="button" data-demo-phase="black">Black Weekend 30%</button>
+    <button type="button" data-demo-phase="ended">Después del 30 nov</button>
+  </div>
+  <button type="button" class="demo-panel__reset" data-demo-clear>Vaciar carrito de prueba</button>
+</details>
+
+<!-- ===== Header simulado del sitio (solo demo) ===== -->
+<header class="demo-header">
+  <div class="wbf-wrap demo-header__in">
+    <a href="https://waggys.pet" target="_blank" rel="noopener" class="demo-header__logo">
+      <img src="https://waggys.pet/cdn/shop/files/Waggys_Logo_final.png?v=1754697796&width=240" alt="Waggy's" height="34" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'Waggy\'s'}))">
+    </a>
+    <nav class="demo-header__nav" aria-label="Menú (demo)">
+      <a href="https://waggys.pet/collections/todos-los-productos-que-tu-perro-necesita" target="_blank" rel="noopener">Perros</a>
+      <a href="https://waggys.pet/collections/todos-los-productos-para-tu-perro" target="_blank" rel="noopener">Gatos</a>
+      <a href="https://waggys.pet/collections/kits" target="_blank" rel="noopener">Kits</a>
+      <a href="#productos" class="is-promo">Buen Fin</a>
+    </nav>
+    <a href="#carrito" class="demo-header__cart" aria-label="Carrito de prueba">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 7h14l-1.5 12h-11z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span data-demo-count>0</span>
+    </a>
+  </div>
+</header>
+
+<main id="wbf-landing">
+
+<!-- ===== 1. Barra con cuenta regresiva ===== -->
+<div class="wbf-bar" role="region" aria-label="Promoción vigente">
+  <div class="wbf-wrap wbf-bar__in">
+    <strong data-wbf-text="bar">Buen Fin: 30% en toda la tienda</strong>
+    <span data-wbf-show="active pre"><span data-wbf-text="clock_label">Termina en</span> <span class="wbf-clock" data-wbf-clock >
+            <span class="wbf-clock__unit"><b data-u="d">0</b><small>d</small></span>
+            <span class="wbf-clock__unit"><b data-u="h">00</b><small>h</small></span>
+            <span class="wbf-clock__unit"><b data-u="m">00</b><small>m</small></span>
+            <span class="wbf-clock__unit"><b data-u="s">00</b><small>s</small></span>
+          </span></span>
+    <span class="wbf-bar__ship">Envío gratis desde $749</span>
+  </div>
+</div>
+
+<!-- ===== 2. Hero ===== -->
+<section class="wbf-hero" aria-labelledby="wbf-hero-title">
+  <div class="wbf-wrap wbf-hero__grid">
+    <div class="wbf-hero__copy">
+      <span class="wbf-hero__kicker" data-wbf-text="kicker">Del 13 al 17 de noviembre</span>
+      <h1 class="wbf-hero__title" id="wbf-hero-title" data-wbf-text="title">Buen Fin Waggy&#x27;s</h1>
+      <p class="wbf-hero__offer" data-wbf-text="offer">30% en toda la tienda, sin códigos</p>
+      <p class="wbf-hero__sub" data-wbf-text="sub">El descuento se aplica solo en tu carrito. Envío gratis desde $749 y regalos desde $1,500.</p>
+
+      <div class="wbf-hero__ctas" data-wbf-show="active ended">
+        <a class="wbf-btn wbf-btn--sun" href="#productos" data-wbf-text="cta" data-wbf-href="cta_url">Comprar con 30%</a>
+        <a class="wbf-btn wbf-btn--ghost" href="#regalos" data-wbf-show="active">Ver mis regalos</a>
+      </div>
+
+      <div data-wbf-show="pre">
+        <form class="wbf-notify" data-wbf-notify>
+          <label class="wbf-sr" for="wbf-email">Tu correo</label>
+          <input id="wbf-email" type="email" name="contact[email]" placeholder="tu@correo.com" required autocomplete="email">
+          <button class="wbf-btn wbf-btn--sun" type="submit">Avísame</button>
+        </form>
+        <p class="wbf-notify__ok" hidden>Listo. Te escribimos el 13 de noviembre a primera hora.</p>
+      </div>
+
+      <div class="wbf-hero__clock" data-wbf-show="active pre">
+        <span data-wbf-text="clock_label">Termina en</span>
+        <span class="wbf-clock" data-wbf-clock >
+            <span class="wbf-clock__unit"><b data-u="d">0</b><small>d</small></span>
+            <span class="wbf-clock__unit"><b data-u="h">00</b><small>h</small></span>
+            <span class="wbf-clock__unit"><b data-u="m">00</b><small>m</small></span>
+            <span class="wbf-clock__unit"><b data-u="s">00</b><small>s</small></span>
+          </span>
+      </div>
+      <p class="wbf-hero__fine">No acumulable con códigos de afiliados, referidos, Waggydólares ni otras promociones. Regalos hasta agotar existencias.</p>
+    </div>
+
+    <div class="wbf-scene" aria-hidden="true">
+      <div class="wbf-tag" data-wbf-show="active pre">
+        <div class="wbf-tag__ring"></div>
+        <div class="wbf-tag__body">
+          <span class="wbf-tag__num"><span data-wbf-text="percent">30</span><sup>%</sup></span>
+          <span class="wbf-tag__label">en toda la tienda</span>
+        </div>
+      </div>
+      <img class="wbf-scene__pack wbf-scene__pack--1" src="https://waggys.pet/cdn/shop/files/empaque-waggys-relax-masticable-ansiedad-perros.png?v=1790013111&width=500" alt="" width="500" height="500">
+      <img class="wbf-scene__pack wbf-scene__pack--2" src="https://waggys.pet/cdn/shop/files/botella-waggys-super-salmon-oil-aceite-perros-gatos.png?v=1790015846&width=600" alt="" width="600" height="600">
+      <img class="wbf-scene__pack wbf-scene__pack--3" src="https://waggys.pet/cdn/shop/files/empaque-waggys-shine-masticables-piel-pelo-perros.png?v=1790012817&width=500" alt="" width="500" height="500">
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. Confianza ===== -->
+<section class="wbf-trust" aria-label="Por qué comprar en Waggy's">
+  <ul class="wbf-wrap wbf-trust__list">
+    <li class="wbf-trust__item"><span class="wbf-trust__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6-5.4-2.9-5.4 2.9 1.1-6-4.5-4.2 6.1-.8z"/></svg></span><p><strong>4.8 de 5</strong><span>Más de 250,000 clientes</span></p></li>
+    <li class="wbf-trust__item"><span class="wbf-trust__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/><path d="M12 9.5v5M9.5 12h5"/></svg></span><p><strong>Hecho por veterinarios</strong><span>Formulado en México</span></p></li>
+    <li class="wbf-trust__item"><span class="wbf-trust__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg></span><p><strong>Envío gratis</strong><span>En compras desde $749</span></p></li>
+    <li class="wbf-trust__item"><span class="wbf-trust__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><p><strong>Pago seguro</strong><span>Tarjeta, PayPal y Shop Pay</span></p></li>
+  </ul>
+</section>
+
+<!-- ===== 4. Escalera de regalos ===== -->
+<section class="wbf-ladder wbf-section" id="regalos" aria-labelledby="wbf-ladder-title">
+  <div class="wbf-wrap">
+    <div class="wbf-head">
+      <div>
+        <h2 class="wbf-h2" id="wbf-ladder-title">Entre más llenas su plato, más te regalamos</h2>
+        <p class="wbf-lede" data-wbf-show="active">Los regalos se agregan a tu pedido cuando llegas a cada monto. Del 13 al 30 de noviembre, hasta agotar existencias.</p>
+        <p class="wbf-lede" data-wbf-show="pre">Del 13 al 30 de noviembre, tu compra suma regalos. Así funciona:</p>
+        <p class="wbf-lede" data-wbf-show="ended">La temporada de regalos terminó. El envío sigue gratis desde $749.</p>
+      </div>
+    </div>
+
+    <div class="wbf-ladder__card" data-wbf-progress id="carrito">
+      <div class="wbf-ladder__status">
+        <p class="wbf-ladder__msg" data-wbf-progress-msg aria-live="polite">Agrega productos y desbloquea envío gratis y regalos.</p>
+        <p class="wbf-ladder__total">Tu carrito: <strong data-wbf-progress-total>$0</strong></p>
+      </div>
+      <div class="wbf-track" role="presentation"><div class="wbf-track__fill"></div></div>
+      <ol class="wbf-steps">
+        <li class="wbf-step" data-wbf-tier="shipping" data-wbf-step="74900">
+          <span class="wbf-step__img"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg></span>
+          <div><p class="wbf-step__amount">Desde $749</p><p class="wbf-step__title">Envío gratis</p><p class="wbf-step__state">Te faltan $749</p></div>
+        </li>
+        <li class="wbf-step" data-wbf-tier="gift1" data-wbf-step="150000" data-wbf-show="active pre">
+          <span class="wbf-step__img"><img src="https://waggys.pet/cdn/shop/files/61.webp?v=1778647574&width=200" alt="" width="200" height="200" loading="lazy"></span>
+          <div><p class="wbf-step__amount">Desde $1,500</p><p class="wbf-step__title">Tuna Bites gratis</p><p class="wbf-step__state">Te faltan $1,500</p></div>
+        </li>
+        <li class="wbf-step" data-wbf-tier="gift2" data-wbf-step="200000" data-wbf-show="active pre">
+          <span class="wbf-step__img"><img src="https://waggys.pet/cdn/shop/files/Untitleddesign_74.png?v=1701910762&width=200" alt="" width="200" height="200" loading="lazy"></span>
+          <div><p class="wbf-step__amount">Desde $2,000</p><p class="wbf-step__title">Bola Loca gratis, además de los Bites</p><p class="wbf-step__state">Te faltan $2,000</p></div>
+        </li>
+      </ol>
+      <p class="wbf-ladder__note">Los montos se calculan con el precio de tus productos antes del descuento de temporada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. Productos ===== -->
+<section class="wbf-products wbf-section" id="productos" aria-labelledby="wbf-products-title">
+  <div class="wbf-wrap">
+    <div class="wbf-head">
+      <div>
+        <h2 class="wbf-h2" id="wbf-products-title">Los favoritos de la manada</h2>
+        <p class="wbf-lede" data-wbf-show="active">Precios con descuento ya calculados. Lo ves igual en tu carrito, sin códigos.</p>
+        <p class="wbf-lede" data-wbf-show="pre ended">Los más pedidos por quienes ya consienten a su perro con Waggy's.</p>
+      </div>
+      <a class="wbf-head__link" href="https://waggys.pet/collections/todos-los-productos-que-tu-perro-necesita" target="_blank" rel="noopener">Ver toda la tienda</a>
+    </div>
+    <div class="wbf-grid">
+      <article class="wbf-card">
+        <a class="wbf-card__media" href="https://waggys.pet/products/aceite-perros-calmante-piel-dolor-inflamacion" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/3_51e79e2a-4461-48ed-8c4b-d7ad108e4c26.webp?v=1778648074&width=600" alt="Aceite Calmante de Waggy's" loading="lazy" width="600" height="600">
+          <span class="wbf-card__badge" hidden>-30%</span>
+        </a>
+        <div class="wbf-card__body">
+          <p class="wbf-card__need">Relajación y dolor</p>
+          <h3 class="wbf-card__title"><a href="https://waggys.pet/products/aceite-perros-calmante-piel-dolor-inflamacion" target="_blank" rel="noopener">Aceite Calmante</a></h3>
+          <p class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span><span>4.9 (354 reseñas)</span></p>
+          <div class="wbf-price" data-wbf-price="69900" data-wbf-compare="87500">
+            <span class="wbf-price__now">$699</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink wbf-btn--small" type="button" data-wbf-add="aceite" data-wbf-unit="69900" data-wbf-title="Aceite Calmante">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="wbf-card">
+        <a class="wbf-card__media" href="https://waggys.pet/products/relax-suplemento-ansiedad-estres-perros" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/empaque-waggys-relax-masticable-ansiedad-perros.png?v=1790013111&width=600" alt="Relax de Waggy's" loading="lazy" width="600" height="600">
+          <span class="wbf-card__badge" hidden>-30%</span>
+        </a>
+        <div class="wbf-card__body">
+          <p class="wbf-card__need">Ansiedad y estrés</p>
+          <h3 class="wbf-card__title"><a href="https://waggys.pet/products/relax-suplemento-ansiedad-estres-perros" target="_blank" rel="noopener">Relax</a></h3>
+          <p class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span><span>4.9 (332 reseñas)</span></p>
+          <div class="wbf-price" data-wbf-price="31900" data-wbf-compare="34900">
+            <span class="wbf-price__now">$319</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink wbf-btn--small" type="button" data-wbf-add="relax" data-wbf-unit="31900" data-wbf-title="Relax">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="wbf-card">
+        <a class="wbf-card__media" href="https://waggys.pet/products/shine-suplemento-comezon-caida-pelo-perros" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/empaque-waggys-shine-masticables-piel-pelo-perros.png?v=1790012817&width=600" alt="Shine de Waggy's" loading="lazy" width="600" height="600">
+          <span class="wbf-card__badge" hidden>-30%</span>
+        </a>
+        <div class="wbf-card__body">
+          <p class="wbf-card__need">Comezón y caída de pelo</p>
+          <h3 class="wbf-card__title"><a href="https://waggys.pet/products/shine-suplemento-comezon-caida-pelo-perros" target="_blank" rel="noopener">Shine</a></h3>
+          <p class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span><span>4.9 (267 reseñas)</span></p>
+          <div class="wbf-price" data-wbf-price="31900" data-wbf-compare="34900">
+            <span class="wbf-price__now">$319</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink wbf-btn--small" type="button" data-wbf-add="shine" data-wbf-unit="31900" data-wbf-title="Shine">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="wbf-card">
+        <a class="wbf-card__media" href="https://waggys.pet/products/belly-probioticos-digestion-alergias-perros" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/empaque-waggys-belly-suplemento-digestivo-alergias.png?v=1790015452&width=600" alt="Belly de Waggy's" loading="lazy" width="600" height="600">
+          <span class="wbf-card__badge" hidden>-30%</span>
+        </a>
+        <div class="wbf-card__body">
+          <p class="wbf-card__need">Digestión y alergias</p>
+          <h3 class="wbf-card__title"><a href="https://waggys.pet/products/belly-probioticos-digestion-alergias-perros" target="_blank" rel="noopener">Belly</a></h3>
+          <p class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span><span>4.9 (38 reseñas)</span></p>
+          <div class="wbf-price" data-wbf-price="33900" data-wbf-compare="37500">
+            <span class="wbf-price__now">$339</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink wbf-btn--small" type="button" data-wbf-add="belly" data-wbf-unit="33900" data-wbf-title="Belly">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="wbf-card">
+        <a class="wbf-card__media" href="https://waggys.pet/products/move-suplemento-articular-movilidad-dolor-perros" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/empaque-waggys-move-condroprotector-perros.png?v=1790015093&width=600" alt="Move de Waggy's" loading="lazy" width="600" height="600">
+          <span class="wbf-card__badge" hidden>-30%</span>
+        </a>
+        <div class="wbf-card__body">
+          <p class="wbf-card__need">Movilidad y articulaciones</p>
+          <h3 class="wbf-card__title"><a href="https://waggys.pet/products/move-suplemento-articular-movilidad-dolor-perros" target="_blank" rel="noopener">Move</a></h3>
+          <p class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span><span>4.9 (32 reseñas)</span></p>
+          <div class="wbf-price" data-wbf-price="33900" data-wbf-compare="37500">
+            <span class="wbf-price__now">$339</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink wbf-btn--small" type="button" data-wbf-add="move" data-wbf-unit="33900" data-wbf-title="Move">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="wbf-card">
+        <a class="wbf-card__media" href="https://waggys.pet/products/super-salmon-oil-aceite-piel-pelo-perros" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/botella-waggys-super-salmon-oil-aceite-perros-gatos.png?v=1790015846&width=600" alt="Super Salmon Oil de Waggy's" loading="lazy" width="600" height="600">
+          <span class="wbf-card__badge" hidden>-30%</span>
+        </a>
+        <div class="wbf-card__body">
+          <p class="wbf-card__need">Piel y pelaje</p>
+          <h3 class="wbf-card__title"><a href="https://waggys.pet/products/super-salmon-oil-aceite-piel-pelo-perros" target="_blank" rel="noopener">Super Salmon Oil</a></h3>
+          <p class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span><span>4.8 (13 reseñas)</span></p>
+          <div class="wbf-price" data-wbf-price="55900" data-wbf-compare="59900">
+            <span class="wbf-price__now">$559</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink wbf-btn--small" type="button" data-wbf-add="salmon" data-wbf-unit="55900" data-wbf-title="Super Salmon Oil">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="wbf-card">
+        <a class="wbf-card__media" href="https://waggys.pet/products/suplemento-antienvejecimiento-y-vitalidad-para-perros-waggys-nad" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/empaque-waggys-nad-longevidad-salud-celular-perros_ca339a42-c694-4c78-ae39-c2eef2aab749.png?v=1790014377&width=600" alt="NAD+ de Waggy's" loading="lazy" width="600" height="600">
+          <span class="wbf-card__badge" hidden>-30%</span>
+        </a>
+        <div class="wbf-card__body">
+          <p class="wbf-card__need">Longevidad</p>
+          <h3 class="wbf-card__title"><a href="https://waggys.pet/products/suplemento-antienvejecimiento-y-vitalidad-para-perros-waggys-nad" target="_blank" rel="noopener">NAD+</a></h3>
+          <p class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span><span>4.9 (51 reseñas)</span></p>
+          <div class="wbf-price" data-wbf-price="44900" data-wbf-compare="49900">
+            <span class="wbf-price__now">$449</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink wbf-btn--small" type="button" data-wbf-add="nad" data-wbf-unit="44900" data-wbf-title="NAD+">Agregar al carrito</button>
+        </div>
+      </article>
+      <article class="wbf-card">
+        <a class="wbf-card__media" href="https://waggys.pet/products/waggys-bites-premios-entrenamiento-perros" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/61.webp?v=1778647574&width=600" alt="Bites de atún o salmón de Waggy's" loading="lazy" width="600" height="600">
+          <span class="wbf-card__badge" hidden>-30%</span>
+        </a>
+        <div class="wbf-card__body">
+          <p class="wbf-card__need">Premios naturales</p>
+          <h3 class="wbf-card__title"><a href="https://waggys.pet/products/waggys-bites-premios-entrenamiento-perros" target="_blank" rel="noopener">Bites de atún o salmón</a></h3>
+          <p class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span><span>4.9 (135 reseñas)</span></p>
+          <div class="wbf-price" data-wbf-price="15900" data-wbf-compare="18900">
+            <span class="wbf-price__now">$159</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink wbf-btn--small" type="button" data-wbf-add="bites" data-wbf-unit="15900" data-wbf-title="Bites de atún o salmón">Agregar al carrito</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. Kits ===== -->
+<section class="wbf-kits wbf-section" aria-labelledby="wbf-kits-title">
+  <div class="wbf-wrap">
+    <div class="wbf-head">
+      <div>
+        <h2 class="wbf-h2" id="wbf-kits-title">Kits que ya llegan a tu regalo</h2>
+        <p class="wbf-lede">Un solo clic y tu carrito sube de escalón. Te decimos qué incluye cada uno.</p>
+      </div>
+      <a class="wbf-head__link" href="https://waggys.pet/collections/kits" target="_blank" rel="noopener">Ver todos los kits</a>
+    </div>
+    <div class="wbf-kits__list">
+      <article class="wbf-kit" data-wbf-kit="149130">
+        <a class="wbf-kit__media" href="https://waggys.pet/products/paquete-ansiedad-y-dolor-en-perros-waggys-zen-mode-kit" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/13_b376edf9-6397-4765-92e7-dba2acd06610.png?v=1773254500&width=800" alt="Zen Mode Kit de Waggy's" loading="lazy" width="800" height="600">
+        </a>
+        <div class="wbf-kit__body">
+          <h3 class="wbf-kit__title">Zen Mode Kit</h3>
+          <p class="wbf-kit__desc">Para ansiedad y dolor: la rutina completa para días de visitas, viajes y cohetes.</p>
+          <ul class="wbf-chips" data-wbf-kit-unlocks></ul>
+          <p class="wbf-kit__nudge" data-wbf-kit-nudge></p>
+          <div class="wbf-price" data-wbf-price="149130" data-wbf-compare="197300">
+            <span class="wbf-price__now">$1,491.30</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink" type="button" data-wbf-add="zen" data-wbf-unit="149130" data-wbf-title="Zen Mode Kit">Agregar kit al carrito</button>
+        </div>
+      </article>
+      <article class="wbf-kit" data-wbf-kit="121230">
+        <a class="wbf-kit__media" href="https://waggys.pet/products/kit-antienvejecimiento-para-perros-waggys-longevity-pack" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/2_fda8ed97-e903-42dc-b1b4-f591cbe80f6f.png?v=1773254480&width=800" alt="Longevity Pack de Waggy's" loading="lazy" width="800" height="600">
+        </a>
+        <div class="wbf-kit__body">
+          <h3 class="wbf-kit__title">Longevity Pack</h3>
+          <p class="wbf-kit__desc">Antienvejecimiento: para perros adultos que quieres ver activos muchos años más.</p>
+          <ul class="wbf-chips" data-wbf-kit-unlocks></ul>
+          <p class="wbf-kit__nudge" data-wbf-kit-nudge></p>
+          <div class="wbf-price" data-wbf-price="121230" data-wbf-compare="147300">
+            <span class="wbf-price__now">$1,212.30</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink" type="button" data-wbf-add="longevity" data-wbf-unit="121230" data-wbf-title="Longevity Pack">Agregar kit al carrito</button>
+        </div>
+      </article>
+      <article class="wbf-kit" data-wbf-kit="299070">
+        <a class="wbf-kit__media" href="https://waggys.pet/products/paquete-de-salud-360-para-perros-waggys-ultimate-wellness-kit" target="_blank" rel="noopener">
+          <img src="https://waggys.pet/cdn/shop/files/12_f6c8e238-4432-406c-80fe-53b56f9ac68a.png?v=1773254518&width=800" alt="Ultimate Wellness Kit de Waggy's" loading="lazy" width="800" height="600">
+        </a>
+        <div class="wbf-kit__body">
+          <h3 class="wbf-kit__title">Ultimate Wellness Kit</h3>
+          <p class="wbf-kit__desc">Salud 360°: todo Waggy&#x27;s en un paquete, y ya incluye tus dos regalos.</p>
+          <ul class="wbf-chips" data-wbf-kit-unlocks></ul>
+          <p class="wbf-kit__nudge" data-wbf-kit-nudge></p>
+          <div class="wbf-price" data-wbf-price="299070" data-wbf-compare="379500">
+            <span class="wbf-price__now">$2,990.70</span>
+            <span class="wbf-price__was" hidden></span>
+            <span class="wbf-price__hint"></span>
+          </div>
+          <button class="wbf-btn wbf-btn--ink" type="button" data-wbf-add="ultimate" data-wbf-unit="299070" data-wbf-title="Ultimate Wellness Kit">Agregar kit al carrito</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. Por necesidad ===== -->
+<section class="wbf-needs wbf-section" aria-labelledby="wbf-needs-title">
+  <div class="wbf-wrap">
+    <div class="wbf-head">
+      <div>
+        <h2 class="wbf-h2" id="wbf-needs-title">¿Qué necesita tu perro?</h2>
+        <p class="wbf-lede">Todo tiene descuento. Empieza por lo que más le preocupa.</p>
+      </div>
+    </div>
+    <ul class="wbf-needs__list">
+      <li><a class="wbf-need" href="https://waggys.pet/collections/calmante-para-perros" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/empaque-waggys-relax-masticable-ansiedad-perros.png?v=1790013111&width=240" alt="" width="240" height="240" loading="lazy"><strong>Relajación</strong><span>Estrés, viajes y pirotecnia</span></a></li>
+      <li><a class="wbf-need" href="https://waggys.pet/collections/probiotico-para-perros" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/empaque-waggys-belly-suplemento-digestivo-alergias.png?v=1790015452&width=240" alt="" width="240" height="240" loading="lazy"><strong>Digestión</strong><span>Panza tranquila y alergias</span></a></li>
+      <li><a class="wbf-need" href="https://waggys.pet/collections/dermatitis-piel-perro" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/empaque-waggys-shine-masticables-piel-pelo-perros.png?v=1790012817&width=240" alt="" width="240" height="240" loading="lazy"><strong>Piel y pelo</strong><span>Comezón y caída de pelo</span></a></li>
+      <li><a class="wbf-need" href="https://waggys.pet/collections/suplemento-articulaciones" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/empaque-waggys-move-condroprotector-perros.png?v=1790015093&width=240" alt="" width="240" height="240" loading="lazy"><strong>Movilidad</strong><span>Articulaciones y dolor</span></a></li>
+      <li><a class="wbf-need" href="https://waggys.pet/products/suplemento-antienvejecimiento-y-vitalidad-para-perros-waggys-nad" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/empaque-waggys-nad-longevidad-salud-celular-perros_ca339a42-c694-4c78-ae39-c2eef2aab749.png?v=1790014377&width=240" alt="" width="240" height="240" loading="lazy"><strong>Longevidad</strong><span>Vitalidad en la edad adulta</span></a></li>
+      <li><a class="wbf-need" href="https://waggys.pet/collections/premios-para-perros" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/61.webp?v=1778647574&width=240" alt="" width="240" height="240" loading="lazy"><strong>Premios</strong><span>Para entrenar y consentir</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 8. Suscripción Golden ===== -->
+<section class="wbf-golden wbf-section" aria-labelledby="wbf-golden-title" data-wbf-show="active pre">
+  <div class="wbf-wrap">
+    <div class="wbf-golden__card">
+      <div>
+        <h2 class="wbf-h2" id="wbf-golden-title">Suscríbete hoy y quédate con 15% para siempre</h2>
+        <p class="wbf-lede">Tu primera entrega lleva el descuento de temporada y todas las que siguen llevan 15%, de por vida. Solo para quienes se suscriban en noviembre o diciembre.</p>
+        <p class="wbf-golden__legal">Si suspendes o cancelas tu suscripción y decides retomarla, aplica la oferta vigente en ese momento. Los suscriptores actuales conservan su 10%.</p>
+      </div>
+      <div class="wbf-golden__calc" data-wbf-golden="31900">
+        <div class="wbf-golden__prod"><img src="https://waggys.pet/cdn/shop/files/empaque-waggys-relax-masticable-ansiedad-perros.png?v=1790013111&width=160" alt="" width="160" height="160" loading="lazy"><b>Ejemplo con Relax ($319)</b></div>
+        <div class="wbf-golden__row"><span data-wbf-golden-first-label>Tu primera entrega (30% de temporada)</span><strong data-wbf-golden-first>$223.30</strong></div>
+        <div class="wbf-golden__row"><span>Cada entrega después (15% de por vida)</span><strong data-wbf-golden-rec>$271.15</strong></div>
+        <a class="wbf-btn wbf-btn--ink" href="https://waggys.pet/products/relax-suplemento-ansiedad-estres-perros" target="_blank" rel="noopener">Suscribirme a Relax</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. Reseñas ===== -->
+<section class="wbf-reviews wbf-section" aria-labelledby="wbf-reviews-title">
+  <div class="wbf-wrap">
+    <div class="wbf-head">
+      <div class="wbf-reviews__score">
+        <span class="wbf-reviews__big">4.8</span>
+        <div>
+          <h2 class="wbf-h2" id="wbf-reviews-title">Más de 250,000 perros más tranquilos</h2>
+          <p class="wbf-lede">Calificaciones reales de los productos más pedidos de la tienda.</p>
+        </div>
+      </div>
+    </div>
+    <ul class="wbf-reviews__list">
+      <li><a class="wbf-review" href="https://waggys.pet/products/aceite-perros-calmante-piel-dolor-inflamacion" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/3_51e79e2a-4461-48ed-8c4b-d7ad108e4c26.webp?v=1778648074&width=300" alt="" width="300" height="300" loading="lazy"><strong>Aceite Calmante</strong><span class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span>4.9</span><span class="wbf-review__count">354 reseñas</span></a></li>
+      <li><a class="wbf-review" href="https://waggys.pet/products/relax-suplemento-ansiedad-estres-perros" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/empaque-waggys-relax-masticable-ansiedad-perros.png?v=1790013111&width=300" alt="" width="300" height="300" loading="lazy"><strong>Relax</strong><span class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span>4.9</span><span class="wbf-review__count">332 reseñas</span></a></li>
+      <li><a class="wbf-review" href="https://waggys.pet/products/shine-suplemento-comezon-caida-pelo-perros" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/empaque-waggys-shine-masticables-piel-pelo-perros.png?v=1790012817&width=300" alt="" width="300" height="300" loading="lazy"><strong>Shine</strong><span class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span>4.9</span><span class="wbf-review__count">267 reseñas</span></a></li>
+      <li><a class="wbf-review" href="https://waggys.pet/products/bola-loca-juguete-interactivo-ansiedad-perros" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/Untitleddesign_74.png?v=1701910762&width=300" alt="" width="300" height="300" loading="lazy"><strong>Bola Loca</strong><span class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span>4.9</span><span class="wbf-review__count">170 reseñas</span></a></li>
+      <li><a class="wbf-review" href="https://waggys.pet/products/waggys-bites-premios-entrenamiento-perros" target="_blank" rel="noopener"><img src="https://waggys.pet/cdn/shop/files/61.webp?v=1778647574&width=300" alt="" width="300" height="300" loading="lazy"><strong>Bites</strong><span class="wbf-rating"><span class="wbf-rating__stars" aria-hidden="true">★★★★★</span>4.9</span><span class="wbf-review__count">135 reseñas</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 10. Condiciones ===== -->
+<section class="wbf-faq wbf-section" aria-labelledby="wbf-faq-title">
+  <div class="wbf-wrap wbf-faq__grid">
+    <div>
+      <h2 class="wbf-h2" id="wbf-faq-title">Lo que necesitas saber</h2>
+      <p class="wbf-lede">Todas las condiciones en un solo lugar, antes de pagar.</p>
+    </div>
+    <div>
+      <details class="wbf-faq__item" open><summary>¿Necesito un código?</summary><div class="wbf-faq__answer"><p>No. El descuento se aplica automáticamente en tu carrito: 30% del 13 al 17 de noviembre y del 27 al 30 de noviembre.</p></div></details>
+      <details class="wbf-faq__item"><summary>¿Cómo recibo mis regalos?</summary><div class="wbf-faq__answer"><p>Del 13 al 30 de noviembre, si tu compra llega a $1,500 te llevas unos Tuna Bites gratis. Si llega a $2,000, además te llevas la Bola Loca. Los regalos son hasta agotar existencias.</p></div></details>
+      <details class="wbf-faq__item"><summary>¿Puedo usar mis Waggydólares o un código de afiliado?</summary><div class="wbf-faq__answer"><p>Durante la temporada no. Los descuentos no se acumulan con códigos de afiliados, referidos, Waggydólares ni otras promociones. El cupón de bienvenida regresa el 7 de enero de 2027.</p></div></details>
+      <details class="wbf-faq__item"><summary>¿Cuánto cuesta el envío?</summary><div class="wbf-faq__answer"><p>Es gratis en compras desde $749.</p></div></details>
+      <details class="wbf-faq__item"><summary>¿Cómo funciona la suscripción con 15% de por vida?</summary><div class="wbf-faq__answer"><p>Si te suscribes en noviembre o diciembre de 2026, tu primera entrega lleva el descuento de temporada y todas las entregas siguientes llevan 15%. Si suspendes o cancelas y decides retomar, aplica la oferta vigente en ese momento.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<div class="wbf-page-pad" aria-hidden="true"></div>
+</main>
+
+<!-- ===== 11. CTA fijo en mobile ===== -->
+<div class="wbf-sticky" aria-label="Resumen de tu carrito">
+  <p class="wbf-sticky__text"><strong data-wbf-text="bar">Buen Fin: 30% en toda la tienda</strong><span data-wbf-sticky-msg>Agrega productos y desbloquea envío gratis y regalos.</span></p>
+  <a class="wbf-btn wbf-btn--sun" href="#productos">Comprar</a>
+</div>
+
+<footer class="demo-footer">
+  <div class="wbf-wrap">
+    <p><strong>Propuesta de Equipo WEECOM para Waggy's.</strong> Vista de ejemplo: el carrito y las fechas son simulados. Precios y calificaciones tomados de waggys.pet en octubre de 2026.</p>
+  </div>
+</footer>
+
+<script type="application/json" id="wbf-config">{"demo": true, "currency": "MXN", "cart_url": "#carrito", "basis": "original", "golden_percent": 15, "nudge_max": 30000, "thresholds": {"shipping": 74900, "gift1": 150000, "gift2": 200000}, "labels": {"shipping": "Envío gratis", "gift1": "Tuna Bites gratis", "gift2": "Bola Loca gratis", "addon_hint": "Súmale unos Bites y llegas.", "shipping_goal": "tu envío gratis", "gift1_goal": "tus Tuna Bites gratis", "gift2_goal": "la Bola Loca gratis"}, "phases": [{"id": "buen-fin", "name": "Buen Fin", "start": "2026-11-13T00:00:00-06:00", "end": "2026-11-18T00:00:00-06:00", "percent": 30, "theme": "light", "kicker": "Del 13 al 17 de noviembre", "title": "Buen Fin Waggy's", "offer": "30% en toda la tienda, sin códigos", "sub": "El descuento se aplica solo en tu carrito. Envío gratis desde $749 y regalos desde $1,500.", "cta": "Comprar con 30%", "cta_url": "#productos", "bar": "Buen Fin: 30% en toda la tienda", "clock_label": "Termina en"}, {"id": "extension", "name": "Extensión", "start": "2026-11-18T00:00:00-06:00", "end": "2026-11-27T00:00:00-06:00", "percent": 20, "theme": "light", "kicker": "Del 18 al 26 de noviembre", "title": "Extendimos el Buen Fin", "offer": "20% en toda la tienda, sin códigos", "sub": "Si no alcanzaste, todavía estás a tiempo. Envío gratis desde $749 y regalos desde $1,500.", "cta": "Comprar con 20%", "cta_url": "#productos", "bar": "Buen Fin extendido: 20% en toda la tienda", "clock_label": "Termina en"}, {"id": "black", "name": "Black Weekend", "start": "2026-11-27T00:00:00-06:00", "end": "2026-12-01T00:00:00-06:00", "percent": 30, "theme": "dark", "kicker": "Del 27 al 30 de noviembre", "title": "Black Weekend", "offer": "Regresa el 30%, Cyber Monday incluido", "sub": "Últimos días de regalos: Tuna Bites desde $1,500 y Bola Loca desde $2,000.", "cta": "Comprar con 30%", "cta_url": "#productos", "bar": "Black Weekend: 30% en toda la tienda", "clock_label": "Termina en"}], "pre": {"kicker": "Empieza el 13 de noviembre", "title": "Buen Fin Waggy's", "offer": "30% en toda la tienda", "sub": "Déjanos tu correo y te avisamos en cuanto arranque. Los regalos son hasta agotar existencias.", "bar": "El Buen Fin Waggy's empieza el 13 de noviembre", "clock_label": "Empieza en", "cta": "Ver productos", "cta_url": "#productos"}, "ended": {"kicker": "Gracias por consentirlos", "title": "El Buen Fin terminó", "offer": "Envío gratis desde $749", "sub": "Los favoritos de la manada siguen aquí.", "bar": "Envío gratis desde $749", "cta": "Ver productos", "cta_url": "#productos"}}</script>
+<script src="assets/demo.js"></script>
+<script src="assets/waggys-bf.js"></script>
+</body>
+</html>
